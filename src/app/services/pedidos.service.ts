@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
+import {Pedido} from '../interfaces/Mesa'
 @Injectable({
   providedIn: 'root'
 })
@@ -16,6 +16,9 @@ export class PedidosService {
   }
 
   getPedidos(mesa){
-    return this.http.get(this.URI+"/"+mesa)
+    let x= this.http.get<Pedido[]>(this.URI+"/"+mesa)
+    console.log(x)
+    return x;
   }
+  
 }

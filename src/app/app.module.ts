@@ -7,13 +7,19 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { PlatillosComponent } from './components/platillos/platillos.component';
 import { CartComponent } from './components/cart/cart.component';
+import { OrdenarComponent } from './components/ordenar/ordenar.component';
+import { OrdenComponent } from './orden/orden.component';
+import { AgradecimientoComponent } from './components/agradecimiento/agradecimiento.component';
 
 @NgModule({
-  declarations: [
+  declarations: [ 
     AppComponent,
     LoginComponent,
     PlatillosComponent,
-    CartComponent
+    CartComponent,
+    OrdenarComponent,
+    OrdenComponent,
+    AgradecimientoComponent
   ],
   imports: [
     BrowserModule,

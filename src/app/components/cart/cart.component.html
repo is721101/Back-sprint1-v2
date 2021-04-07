@@ -16,7 +16,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/platillos"> Platillos <span class="sr-only">(current)</span></a>
+          <a class="nav-link" (click)="gotoPlatillos"> Platillos <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" (click)="getWaiter()">Solicitar mesero</a>
@@ -34,8 +34,8 @@
    <h2 class="white center"><i class="bi bi-cart-check"></i> Artículos pedidos</h2>
    <div class="card tarjetas">
      <h2 class="center" id="idMesa"></h2>
-     <ul id="ordenados" *ngFor="let pedido of pedidos">
-        <li><h4>{{pedido.cantidad}} {{pedido.platillo}}</h4> </li>
+     <ul id="ordenados" *ngFor="let pedido of this.table.pedido">
+        <li><h4>{{pedido.cantidad}} {{pedido.platillo}}  ${{pedido.precio}}</h4> </li>
        
      </ul>
    </div>

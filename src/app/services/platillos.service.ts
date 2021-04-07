@@ -11,9 +11,11 @@ export class PlatillosService {
 
   constructor(private http: HttpClient) { }
 
-
+  
   getPlatillos(){
     return this.http.get<Platillo[]>(this.URI);
   }
+  
+  }
 
-}
+
